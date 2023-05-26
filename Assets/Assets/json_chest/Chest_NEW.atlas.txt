@@ -1,0 +1,53 @@
+Chest_NEW.png
+size:1602,1602
+filter:Linear,Linear
+pma:true
+chest bottom
+bounds:2,70,960,414
+offsets:1,1,962,417
+rotate:90
+closed chest top
+bounds:2,1032,974,568
+offsets:1,4,976,573
+coin back
+bounds:1205,80,632,267
+offsets:1,1,634,269
+rotate:90
+coin front
+bounds:915,4,708,288
+offsets:1,1,710,290
+rotate:90
+diamond 1
+bounds:1474,449,114,128
+offsets:1,1,116,131
+diamond 2
+bounds:1474,579,126,133
+offsets:2,1,129,135
+glowing light
+bounds:978,714,886,580
+offsets:36,51,965,632
+rotate:90
+opened chest top
+bounds:418,84,946,495
+offsets:1,2,948,498
+rotate:90
+sparkle 1
+bounds:1474,333,114,111
+offsets:12,20,134,155
+rotate:90
+sparkle 2
+bounds:1474,333,114,111
+offsets:12,20,134,155
+rotate:90
+sparkle 3
+bounds:1474,333,114,111
+offsets:12,20,134,155
+rotate:90
+sparkle 4
+bounds:1474,333,114,111
+offsets:12,20,134,155
+rotate:90
+sparkle 5
+bounds:1474,333,114,111
+offsets:12,20,134,155
+rotate:90
