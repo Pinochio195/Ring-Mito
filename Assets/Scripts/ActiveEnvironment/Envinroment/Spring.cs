@@ -25,6 +25,17 @@ public class Spring : BaseTouch
         {
             StartCoroutine(MoveWoodSmoothly(new Vector3(0f, -moveAmount, 0f), moveSpeed));
         }
+
+        #region Tutorials
+
+        if (GameManager.Instance._tutorials._enumTutorials == Ring.Tutorials.EnumTutorials.Step5)
+        {
+            GameManager.Instance._tutorials._listTutorialUI_2.ForEach(item=>item.SetActive(false));
+            GameManager.Instance._tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.Step6;
+            GameManager.Instance._tutorials.ischeckState = true;
+        }
+
+        #endregion
     }
 
     protected override void OnMouseUp()

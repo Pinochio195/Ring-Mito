@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    #region Singleton
     // Singleton instance
     private static GameManager instance;
 
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     {
         get { return instance; }
     }
+    #endregion
     
     [Space(10)] [HeaderTextColor(0.6f, 0.6f, 1, headerText = "Star")]
     public Ring.UI_List _star;
@@ -51,7 +53,7 @@ public class GameManager : MonoBehaviour
         }
         else if(scene.name.Equals("2"))
         {
-            _tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.StepEnd;
+            _tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.Step1;
         }
     }
     // Start is called before the first frame update

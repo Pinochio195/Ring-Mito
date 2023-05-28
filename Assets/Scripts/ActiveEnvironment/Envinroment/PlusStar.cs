@@ -11,35 +11,39 @@ public class PlusStar : BaseButton
     private bool isMoving;
     public float movementSpeed = 5f;
     private int _indexCoin;
+
     private void Update()
     {
         if (isMoving)
         {
-            // Di chuyển đến vị trí B
-            _star.transform.position =
-                Vector3.MoveTowards(_star.transform.position, targetPosition, movementSpeed * Time.deltaTime);
-
-            // Kiểm tra nếu đã đến vị trí B
-            if (_star.transform.position == targetPosition)
+            if (_star != null)
             {
-                // Biến mất
-                Destroy(_star);
-                CoinManager.Instance._listCoin[_indexCoin].GetComponent<SpriteRenderer>().color = Color.white;
-                isMoving = false;
+                // Di chuyển đến vị trí B
+                _star.transform.position =
+                    Vector3.MoveTowards(_star.transform.position, targetPosition, movementSpeed * Time.deltaTime);
 
-                #region Tạo tutorial
-
-                if (GameManager.Instance._tutorials._countLevel.Equals("1"))
+                // Kiểm tra nếu đã đến vị trí B
+                if (_star.transform.position == targetPosition)
                 {
-                    GameManager.Instance._tutorials._listTutorialUI_1.ForEach(item=>item.SetActive(false));
-                    if (GameManager.Instance._tutorials._enumTutorials == Ring.Tutorials.EnumTutorials.Step2)
+                    // Biến mất
+                    Destroy(_star);
+                    CoinManager.Instance._listCoin[_indexCoin].GetComponent<SpriteRenderer>().color = Color.white;
+                    isMoving = false;
+
+                    #region Tạo tutorial
+
+                    if (GameManager.Instance._tutorials._countLevel.Equals("1"))
                     {
-                        GameManager.Instance._tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.Step3;
-                        GameManager.Instance._tutorials.ischeckState = true;
+                        GameManager.Instance._tutorials._listTutorialUI_1.ForEach(item => item.SetActive(false));
+                        if (GameManager.Instance._tutorials._enumTutorials == Ring.Tutorials.EnumTutorials.Step2)
+                        {
+                            GameManager.Instance._tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.Step3;
+                            GameManager.Instance._tutorials.ischeckState = true;
+                        }
                     }
+
+                    #endregion
                 }
-                
-                #endregion
             }
         }
     }
@@ -59,7 +63,7 @@ public class PlusStar : BaseButton
             }
         }
 
-        if (count==0)
+        if (count == 0)
         {
             for (int i = 0; i < CoinManager.Instance._listCoin.Count; i++)
             {
@@ -70,6 +74,7 @@ public class PlusStar : BaseButton
                 }
             }
         }
+
         _star = Instantiate(_prefabsStar, Camera.main.ScreenToWorldPoint(transform.position), Quaternion.identity);
     }
 

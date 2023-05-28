@@ -28,6 +28,15 @@ public class BoxGame : MonoBehaviour
 
             #endregion
         }
+        #region Tutorials
+
+        if (GameManager.Instance._tutorials._enumTutorials == Ring.Tutorials.EnumTutorials.Step6)
+        {
+            GameManager.Instance._tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.StepEnd;
+            GameManager.Instance._tutorials.ischeckState = true;
+        }
+
+        #endregion
     }
 
     IEnumerator DelayWin()

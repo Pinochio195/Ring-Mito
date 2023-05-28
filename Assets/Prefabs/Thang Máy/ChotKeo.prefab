@@ -250,10 +250,11 @@ MonoBehaviour:
   Wood: {fileID: 0}
   moveDirection: 0
   _listActive: []
-  distanceX: 3
+  distanceX: 3.5
   moveSpeed: 2
   rotationSpeed: 60
   isRotating: 0
+  isCounterClockwise: 0
 --- !u!61 &2594775725385289527
 BoxCollider2D:
   m_ObjectHideFlags: 0

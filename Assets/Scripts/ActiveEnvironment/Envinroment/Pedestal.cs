@@ -113,6 +113,17 @@ public class Pedestal : BaseTouch
             yield return null;
         }
         isRotating = false;
+
+        #region Tutorials 2
+
+        if (GameManager.Instance._tutorials._enumTutorials == Ring.Tutorials.EnumTutorials.Step2)
+        {
+            GameManager.Instance._tutorials._listTutorialUI_2.ForEach(item => item.SetActive(false));
+            GameManager.Instance._tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.Step3;
+            GameManager.Instance._tutorials.ischeckState = true;
+        }
+
+        #endregion
         gameObject.GetComponent<Collider2D>().enabled = true;
     }
 }

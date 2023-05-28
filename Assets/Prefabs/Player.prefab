@@ -72,7 +72,7 @@ MonoBehaviour:
     _rigidbody: {fileID: 5782336884373159409}
     _skeletonAnimation: {fileID: 5782336885473379467}
   _playerMove:
-    Speed_Move: 2
+    Speed_Move: 5
     isMovingLeft: 0
     isMovingRight: 0
   _sleepTime:

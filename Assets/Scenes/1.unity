@@ -2077,26 +2077,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8252622607295018513, guid: 55d3f8549978c614f8bda55bd4b5a2da, type: 3}
+      propertyPath: _listCoin.Array.data[0]
+      value: 
+      objectReference: {fileID: 1436010167}
+    - target: {fileID: 8252622607295018513, guid: 55d3f8549978c614f8bda55bd4b5a2da, type: 3}
+      propertyPath: _listCoin.Array.data[1]
+      value: 
+      objectReference: {fileID: 1423266545}
+    - target: {fileID: 8252622607295018513, guid: 55d3f8549978c614f8bda55bd4b5a2da, type: 3}
+      propertyPath: _listCoin.Array.data[2]
+      value: 
+      objectReference: {fileID: 1582565239}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55d3f8549978c614f8bda55bd4b5a2da, type: 3}
---- !u!1 &8252622607295018512 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 132960106987486459, guid: 55d3f8549978c614f8bda55bd4b5a2da, type: 3}
-  m_PrefabInstance: {fileID: 8252622607295018511}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8252622607295018513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8252622607295018512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 905758f2c7aa68e48b0814d7078988df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _listCoin:
-  - {fileID: 1436010167}
-  - {fileID: 1423266545}
-  - {fileID: 1582565239}

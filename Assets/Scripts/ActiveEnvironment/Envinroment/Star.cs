@@ -40,11 +40,9 @@ public class Star : MonoBehaviour
             {
                 GameManager.Instance._tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.Step2;
                 GameManager.Instance._tutorials.ischeckState = true;
-                Debug.Log(123);
             }
             else if (GameManager.Instance._tutorials._enumTutorials == Ring.Tutorials.EnumTutorials.Step3)
             {
-                Debug.Log(123);
                 GameManager.Instance._tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.Step4;
                 GameManager.Instance._tutorials.ischeckState = true;
             }
