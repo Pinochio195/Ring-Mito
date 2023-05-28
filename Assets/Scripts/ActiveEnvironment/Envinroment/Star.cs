@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,14 +31,31 @@ public class Star : MonoBehaviour
     {
         _rigidbody2D.isKinematic = false;
         _rigidbody2D.position = transform.position;
-        
+
+        #region Tạo Tutorial
+        if (GameManager.Instance._tutorials._countLevel.Equals("1"))
+        {
+            GameManager.Instance._tutorials._listTutorialUI_1.ForEach(item=>item.SetActive(false));
+            if (GameManager.Instance._tutorials._enumTutorials == Ring.Tutorials.EnumTutorials.Step1)
+            {
+                GameManager.Instance._tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.Step2;
+                GameManager.Instance._tutorials.ischeckState = true;
+                Debug.Log(123);
+            }
+            else if (GameManager.Instance._tutorials._enumTutorials == Ring.Tutorials.EnumTutorials.Step3)
+            {
+                Debug.Log(123);
+                GameManager.Instance._tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.Step4;
+                GameManager.Instance._tutorials.ischeckState = true;
+            }
+        }
+        #endregion
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            
             for (int i = 0; i <  GameManager.Instance._star._listStar.Count; i++)
             {
                 if (!GameManager.Instance._star._listStar[i].GetComponent<StarInUi>().isCheck)
@@ -52,8 +66,6 @@ public class Star : MonoBehaviour
                     break;
                 }
             }
-            
-            
             _rigidbody2D.isKinematic = true;
             _boxCollider.enabled = false;
             isMoving = true;

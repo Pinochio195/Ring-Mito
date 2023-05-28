@@ -26,6 +26,20 @@ public class PlusStar : BaseButton
                 Destroy(_star);
                 CoinManager.Instance._listCoin[_indexCoin].GetComponent<SpriteRenderer>().color = Color.white;
                 isMoving = false;
+
+                #region Tạo tutorial
+
+                if (GameManager.Instance._tutorials._countLevel.Equals("1"))
+                {
+                    GameManager.Instance._tutorials._listTutorialUI_1.ForEach(item=>item.SetActive(false));
+                    if (GameManager.Instance._tutorials._enumTutorials == Ring.Tutorials.EnumTutorials.Step2)
+                    {
+                        GameManager.Instance._tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.Step3;
+                        GameManager.Instance._tutorials.ischeckState = true;
+                    }
+                }
+                
+                #endregion
             }
         }
     }

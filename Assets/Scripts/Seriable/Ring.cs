@@ -41,7 +41,23 @@ namespace Ring
     {
         public List<GameObject> _listStar;
         public List<GameObject> _listButton;
-        
+    }
+    [Serializable]
+    public class Tutorials
+    {
+        public List<GameObject> _listTutorialUI_1;
+        public List<GameObject> _listTutorialUI_2;
+        public EnumTutorials _enumTutorials;
+        public string _countLevel;
+        public bool ischeckState;
+        public enum EnumTutorials
+        {
+            Step1,
+            Step2,
+            Step3,
+            Step4,
+            StepEnd
+        }
     }
     
 }

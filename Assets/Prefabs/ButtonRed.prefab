@@ -434,6 +434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4823452621271652750}
   - component: {fileID: 4823452621271652751}
+  - component: {fileID: 736452008}
   m_Layer: 0
   m_Name: ButtonRed
   m_TagString: Untagged
@@ -468,12 +469,31 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.09805095, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2842319
+--- !u!114 &736452008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823452621271652745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f25081b9ed428046b0668ed38e678ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wood: {fileID: 0}
+  moveDirection: 1
+  _listActive:
+  - {fileID: 4823452620735690260}
+  - {fileID: 4823452621228790205}
+  distanceX: 2
+  moveSpeed: 2
 --- !u!1 &4823452621383562206
 GameObject:
   m_ObjectHideFlags: 0

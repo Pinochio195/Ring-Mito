@@ -148,4 +148,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 7282404491723621741}
   _boxCollider: {fileID: 7282404491723621714}
-  movementSpeed: 1
+  targetPosition: {x: 0, y: 0, z: 0}
+  movementSpeed: 15

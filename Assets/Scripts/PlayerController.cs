@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour
     [Space(10)] [HeaderTextColor(0.2f, 1, 1, headerText = "Move For Player")] [SerializeField]
     public Player_Move _playerMove;
 
-    [Space(10)] [HeaderTextColor(0.2f, 1, 1, headerText = "Move For Player")]
-    [SerializeField] TimeToSleep _sleepTime;
+    [Space(10)] [HeaderTextColor(0.2f, 1, 1, headerText = "Move For Player")] [SerializeField]
+    TimeToSleep _sleepTime;
 
     private void Awake()
     {
@@ -36,7 +36,11 @@ public class PlayerController : MonoBehaviour
 
         instance = this;
     }
-    
+
+    private void Start()
+    {
+    }
+
     private void Update()
     {
     }
@@ -50,6 +54,7 @@ public class PlayerController : MonoBehaviour
 
     void PlayerMove()
     {
+        
         if (_playerMove.isMovingLeft)
         {
             _sleepTime.isCheckTime = true;
@@ -78,7 +83,6 @@ public class PlayerController : MonoBehaviour
                 _sleepTime._timeTouch = 0;
             }
 
-            _playerComponent._rigidbody.velocity = Vector2.zero;
         }
     }
 
@@ -87,7 +91,9 @@ public class PlayerController : MonoBehaviour
         #region Sleep
 
         _sleepTime._timeTouch = 0;
+
         #endregion
+
         _playerMove.isMovingLeft = true;
 
         _playerComponent._skeletonAnimation.skeleton.ScaleX = -1f; // Quay Player về phía trái
@@ -98,6 +104,11 @@ public class PlayerController : MonoBehaviour
     {
         _playerMove.isMovingLeft = false;
         _playerComponent._skeletonAnimation.AnimationName = "idle";
+        
+        if (_playerComponent._rigidbody.velocity != Vector2.zero)
+        {
+            _playerComponent._rigidbody.velocity = Vector2.zero;
+        }
     }
 
     public void StartMovingRight()
@@ -105,16 +116,24 @@ public class PlayerController : MonoBehaviour
         #region Sleep
 
         _sleepTime._timeTouch = 0;
+
         #endregion
+
         _playerMove.isMovingRight = true;
         _playerComponent._skeletonAnimation.skeleton.ScaleX = 1f; // Quay Player về phía phải
         _playerComponent._skeletonAnimation.AnimationName = "walk";
+        
     }
 
     public void StopMovingRight()
     {
         _playerMove.isMovingRight = false;
         _playerComponent._skeletonAnimation.AnimationName = "idle";
+        
+        if (_playerComponent._rigidbody.velocity != Vector2.zero)
+        {
+            _playerComponent._rigidbody.velocity = Vector2.zero;
+        }
     }
 
     #endregion
