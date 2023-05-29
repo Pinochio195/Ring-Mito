@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Raw : MonoBehaviour
 {
-    public float rotationSpeed = 10f;   // Vận tốc xoay
+    public float rotationSpeed = 10f; // Vận tốc xoay
     public RotationDirection direction; // Enum để chọn hướng xoay
-    
+
     public enum RotationDirection
     {
         Clockwise,
@@ -15,17 +15,37 @@ public class Raw : MonoBehaviour
 
     private void Update()
     {
-        if (Pedestal.Instance.isRotating)
+        if (Pedestal.Instance != null)
         {
-            if (Pedestal.Instance.isCounterClockwise)
+            if (Pedestal.Instance.isRotating)
             {
-                direction = RotationDirection.CounterClockwise;
+                if (Pedestal.Instance.isCounterClockwise)
+                {
+                    direction = RotationDirection.CounterClockwise;
+                }
+                else
+                {
+                    direction = RotationDirection.Clockwise;
+                }
+
+                Rotate();
             }
-            else
+        }
+        else if (SteeringWheelRotation.Instance != null)
+        {
+            if (SteeringWheelRotation.Instance.isRotating)
             {
-                direction = RotationDirection.Clockwise;
+                if (SteeringWheelRotation.Instance.isCounterClockwise)
+                {
+                    direction = RotationDirection.CounterClockwise;
+                }
+                else
+                {
+                    direction = RotationDirection.Clockwise;
+                }
+
+                Rotate();
             }
-            Rotate();
         }
     }
 

@@ -32,7 +32,7 @@ public class Tutorials : MonoBehaviour
                 {
                     GameManager.Instance._tutorials._listTutorialUI_2[0].SetActive(true);
                 }
-                else
+                else if(GameManager.Instance._tutorials._countLevel.Equals("3"))
                 {
                     GameManager.Instance._tutorials._listTutorialUI_3[0].SetActive(true);
                 }
