@@ -9,6 +9,7 @@ public class ButtonGreenActive : BaseCollider
     private Coroutine moveCoroutine; // Coroutine để di chuyển từ từ
     private Vector3 _startPosition;
     private Vector3 _endPosition;
+
     private void Start()
     {
         float moveAmount = moveDirection == MoveDirection.Left ? -distanceX : distanceX;
@@ -37,33 +38,30 @@ public class ButtonGreenActive : BaseCollider
     {
         if (collision.CompareTag("Player"))
         {
-            
-        DisableButton();
-        if (Wood != null)
-        {
-            // Di chuyển theo hướng ban đầu
-            StopAllCoroutines();
-            EnableButton();
-            Vector3 moveDistance = moveDirection == MoveDirection.Left ? _startPosition : _endPosition;
-            moveCoroutine = StartCoroutine(MoveWoodSmoothly(moveDistance, moveSpeed));
-        }
+            DisableButton();
+            if (Wood != null)
+            {
+                // Di chuyển theo hướng ban đầu
+                StopAllCoroutines();
+                EnableButton();
+                Vector3 moveDistance = moveDirection == MoveDirection.Left ? _endPosition : _startPosition;
+                moveCoroutine = StartCoroutine(MoveWoodSmoothly(_endPosition, moveSpeed));
+            }
         }
     }
 
     protected override void OnTriggerExit2D(Collider2D collision)
     {
-
         if (collision.CompareTag("Player"))
         {
             EnableButton();
-
             if (Wood != null)
             {
                 // Di chuyển về vị trí ban đầu
                 DisableButton();
                 StopAllCoroutines();
-                Vector3 moveDistance = moveDirection == MoveDirection.Left ? _endPosition : _startPosition;
-                moveCoroutine = StartCoroutine(MoveWoodSmoothly(moveDistance, moveSpeed));
+                Vector3 moveDistance = moveDirection == MoveDirection.Left ? _startPosition : _endPosition;
+                moveCoroutine = StartCoroutine(MoveWoodSmoothly(_startPosition, moveSpeed));
             }
         }
     }

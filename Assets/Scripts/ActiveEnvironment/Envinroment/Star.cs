@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,8 +21,15 @@ public class Star : MonoBehaviour
             // Kiểm tra nếu đã đến vị trí B
             if (transform.position == targetPosition)
             {
+                for (int i = 0; i < CoinManager.Instance._listCoin.Count; i++)
+                {
+                    if (CoinManager.Instance._listCoin[i].name.Equals(gameObject.name))
+                    {
+                        CoinManager.Instance._listCoin.RemoveAt(i);
+                    }
+                }
                 // Biến mất
-                GameManager.Instance._star._listStar[_indexStar].GetComponent<Image>().color = Color.white;
+                GameManager.Instance._star._listStar[_indexStar].GetComponent<Image>().sprite = GameManager.Instance._environmentStar._yellowStar;
                 Destroy(gameObject);
                 isMoving = false;
             }
@@ -49,7 +57,7 @@ public class Star : MonoBehaviour
         }
         #endregion
     }
-
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -69,6 +77,4 @@ public class Star : MonoBehaviour
             isMoving = true;
         }
     }
-
-    
 }

@@ -10,7 +10,7 @@ public class Camera2D : MonoBehaviour
         float Bt = (float)Screen.width / (float)Screen.height;
         if (Bt < Al)
         {
-            Camera.main.orthographicSize = (float)(Al * 9.6f) / (float)Bt;
+            Camera.main.orthographicSize = (float)(Al * 5f) / (float)Bt;
         }
 
     }

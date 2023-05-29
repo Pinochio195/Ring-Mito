@@ -11,6 +11,7 @@ namespace Ring
     {
         public Rigidbody2D _rigidbody;
         public SkeletonAnimation _skeletonAnimation;
+        public Collider _collider;
     }
     [Serializable]
     public class Player_Move
@@ -20,17 +21,24 @@ namespace Ring
         public bool isMovingRight = false;
     }
     [Serializable]
+    public class Player_Jump
+    {
+        public Transform groundCheckTransform; // Đối tượng Transform để chỉ định vị trí bắt đầu của tia
+        public float rayDistance = 3f; // Khoảng cách tia bắn xuống dưới
+        public bool isCheckGround;
+        public bool isCheckOnSpring;
+    }
+    [Serializable]
     public class TimeToSleep
     {
         public bool isCheckTime;
         public float _timeTouch;
     }
     [Serializable]
-    public class Environment_PlusStar
+    public class Environment_Star
     {
-        public GameObject _blackStar;
-        public GameObject _yellowStar;
-        public Transform _spawnStar;
+        public Sprite _blackStar;
+        public Sprite _yellowStar;
     }
     
     
@@ -47,6 +55,7 @@ namespace Ring
     {
         public List<GameObject> _listTutorialUI_1;
         public List<GameObject> _listTutorialUI_2;
+        public List<GameObject> _listTutorialUI_3;
         public EnumTutorials _enumTutorials;
         public string _countLevel;
         public bool ischeckState;

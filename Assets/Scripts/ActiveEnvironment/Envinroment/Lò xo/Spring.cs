@@ -11,7 +11,7 @@ public class Spring : BaseTouch
     private Vector3 _startPosition;
     private Vector3 _endPosition;
     private bool isMoved; // Trạng thái đã di chuyển
-
+    public Vector2 _force;
     
 
     protected override void OnMouseDown()
@@ -66,7 +66,11 @@ public class Spring : BaseTouch
             distanceRemaining = Mathf.Max(0f, moveDistance.magnitude - distanceMoved);
             elapsedTime += Time.deltaTime;
 
-        PlayerController.Instance._playerComponent._rigidbody.velocity = new Vector2((PlayerController.Instance._playerComponent._skeletonAnimation.skeleton.ScaleX > 0 ? 5 : -5),15f);
+            if (PlayerController.Instance._playerJump.isCheckOnSpring)
+            {
+                Debug.Log(123);
+                PlayerController.Instance._playerComponent._rigidbody.velocity = new Vector2((PlayerController.Instance._playerComponent._skeletonAnimation.skeleton.ScaleX > 0 ? _force.x : -_force.x),_force.y);
+            }
             yield return null;
         }
 

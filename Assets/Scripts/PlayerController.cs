@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Ring;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    #region Singleton
+
     // Singleton instance
     private static PlayerController instance;
 
@@ -15,6 +18,10 @@ public class PlayerController : MonoBehaviour
         get { return instance; }
     }
 
+    #endregion
+
+    #region Component
+
     //Player Component
     [HeaderTextColor(0.2f, 1, 1, headerText = "Component For Player")]
     public Player_Component _playerComponent;
@@ -22,8 +29,12 @@ public class PlayerController : MonoBehaviour
     [Space(10)] [HeaderTextColor(0.2f, 1, 1, headerText = "Move For Player")] [SerializeField]
     public Player_Move _playerMove;
 
-    [Space(10)] [HeaderTextColor(0.2f, 1, 1, headerText = "Move For Player")] [SerializeField]
-    TimeToSleep _sleepTime;
+    [Space(10)] [HeaderTextColor(0.2f, 1, 1, headerText = "Move For Player")]
+    public TimeToSleep _sleepTime;
+    [Space(10)] [HeaderTextColor(0.2f, 1, 1, headerText = "Jump For Player")]
+    public Player_Jump _playerJump;
+
+    #endregion
 
     private void Awake()
     {
@@ -43,6 +54,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        CheckPlayerJump();
     }
 
     private void FixedUpdate()
@@ -54,7 +66,6 @@ public class PlayerController : MonoBehaviour
 
     void PlayerMove()
     {
-        
         if (_playerMove.isMovingLeft)
         {
             _sleepTime.isCheckTime = true;
@@ -82,7 +93,6 @@ public class PlayerController : MonoBehaviour
             {
                 _sleepTime._timeTouch = 0;
             }
-
         }
     }
 
@@ -104,7 +114,7 @@ public class PlayerController : MonoBehaviour
     {
         _playerMove.isMovingLeft = false;
         _playerComponent._skeletonAnimation.AnimationName = "idle";
-        
+
         if (_playerComponent._rigidbody.velocity != Vector2.zero)
         {
             _playerComponent._rigidbody.velocity = Vector2.zero;
@@ -122,14 +132,13 @@ public class PlayerController : MonoBehaviour
         _playerMove.isMovingRight = true;
         _playerComponent._skeletonAnimation.skeleton.ScaleX = 1f; // Quay Player về phía phải
         _playerComponent._skeletonAnimation.AnimationName = "walk";
-        
     }
 
     public void StopMovingRight()
     {
         _playerMove.isMovingRight = false;
         _playerComponent._skeletonAnimation.AnimationName = "idle";
-        
+
         if (_playerComponent._rigidbody.velocity != Vector2.zero)
         {
             _playerComponent._rigidbody.velocity = Vector2.zero;
@@ -137,4 +146,32 @@ public class PlayerController : MonoBehaviour
     }
 
     #endregion
+
+    #region Check Player trên không để jump
+
+    void CheckPlayerJump()
+    {
+        _playerJump.isCheckGround = Physics2D.Raycast(_playerJump.groundCheckTransform.position, Vector2.down,
+            _playerJump.rayDistance, LayerMask.GetMask("Ground", "GroundLow"));
+        Debug.DrawRay(_playerJump.groundCheckTransform.position, Vector2.down * _playerJump.rayDistance, Color.red);
+        if (_playerJump.isCheckGround && !_playerMove.isMovingLeft && !_playerMove.isMovingRight && (_playerComponent._skeletonAnimation.AnimationName == "walk"||_playerComponent._skeletonAnimation.AnimationName == "jump1"))
+        {
+            _playerComponent._skeletonAnimation.AnimationName = "idle";
+            Debug.Log(123);
+        }
+        else if ((_playerJump.isCheckGround &&( _playerMove.isMovingLeft || _playerMove.isMovingRight)) && _playerComponent._skeletonAnimation.AnimationName != "walk" )
+        {
+            Debug.Log(2);
+            _playerComponent._skeletonAnimation.AnimationName = "walk";
+        }
+        else if(!_playerJump.isCheckGround)
+        {
+            Debug.Log(3);
+            _playerComponent._skeletonAnimation.AnimationName = "jump1";
+        }
+    }
+
+    #endregion
+    
+    
 }

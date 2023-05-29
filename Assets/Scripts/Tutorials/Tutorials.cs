@@ -28,11 +28,14 @@ public class Tutorials : MonoBehaviour
                 {
                     GameManager.Instance._tutorials._listTutorialUI_1[0].SetActive(true);
                 }
-                else
+                else if(GameManager.Instance._tutorials._countLevel.Equals("2"))
                 {
                     GameManager.Instance._tutorials._listTutorialUI_2[0].SetActive(true);
                 }
-
+                else
+                {
+                    GameManager.Instance._tutorials._listTutorialUI_3[0].SetActive(true);
+                }
                 GameManager.Instance._tutorials.ischeckState = false;
                 break;
 
@@ -86,10 +89,16 @@ public class Tutorials : MonoBehaviour
                 {
                     GameManager.Instance._tutorials._listTutorialUI_1.ForEach(item => item.SetActive(false));
                 }
-                else
+                else if (GameManager.Instance._tutorials._countLevel.Equals("2"))
                 {
                     GameManager.Instance._tutorials._listTutorialUI_2.ForEach(item => item.SetActive(false));
+                    
                 }
+                else
+                {
+                    GameManager.Instance._tutorials._listTutorialUI_3.ForEach(item => item.SetActive(false));
+                }
+              
 
                 GameManager.Instance._tutorials.ischeckState = false;
                 break;
