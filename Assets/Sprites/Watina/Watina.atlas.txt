@@ -1,0 +1,97 @@
+Watina.png
+size:2111,2111
+filter:Linear,Linear
+pma:true
+Skin0/1
+bounds:1796,302,157,165
+offsets:1,1,159,167
+Skin0/2
+bounds:1564,44,244,231
+offsets:1,1,246,233
+rotate:90
+Skin0/3
+bounds:1797,139,155,161
+offsets:1,1,157,163
+Skin0/4
+bounds:1955,314,153,152
+offsets:1,1,155,154
+rotate:90
+Skin0/Group 3
+bounds:1213,21,267,349
+offsets:1,1,269,351
+rotate:90
+Skin0/Layer 135
+bounds:466,2,265,334
+offsets:1,1,267,336
+rotate:90
+Skin0/Layer 62 copy
+bounds:490,269,495,293
+rotate:90
+Skin0/body
+bounds:1522,1470,639,536
+offsets:0,1,639,537
+rotate:90
+Skin0/ear L
+bounds:802,15,409,269
+offsets:1,0,410,269
+Skin0/ear R
+bounds:785,286,379,235
+offsets:0,1,379,236
+Skin0/eye
+bounds:490,766,598,343
+offsets:11,7,621,351
+rotate:90
+Skin0/eye_bi attack
+bounds:1464,1185,598,283
+offsets:11,7,621,290
+Skin0/eye_happy
+bounds:835,681,598,204
+offsets:11,7,621,211
+Skin0/eye_sad
+bounds:861,1214,601,297
+offsets:8,7,621,304
+Skin0/hand L
+bounds:1166,290,231,314
+offsets:0,0,232,314
+rotate:90
+Skin0/hand R
+bounds:1482,290,199,312
+rotate:90
+Skin0/head
+bounds:2,1366,857,743
+offsets:1,0,869,743
+Skin0/mouth
+bounds:1796,469,64,20
+offsets:1,1,66,22
+Skin0/mouth_bi attack
+bounds:1875,469,219,150
+rotate:90
+Skin0/mouth_happy
+bounds:1536,491,337,197
+Skin0/mouth_nomal
+bounds:2002,838,91,32
+rotate:90
+Skin0/mouth_sad
+bounds:2060,2010,99,36
+offsets:0,1,100,38
+rotate:90
+Skin0/neck
+bounds:1435,690,565,239
+Skin1/bear_hat
+bounds:2,442,922,486
+offsets:1,1,925,488
+rotate:90
+Skin1/bear_scarf
+bounds:835,887,561,325
+offsets:1,0,562,325
+Skin2/magic_ao_1
+bounds:785,523,749,156
+offsets:1,1,751,158
+Skin2/magic_ao_2
+bounds:1398,931,668,252
+Skin2/magic_ao_3
+bounds:2,3,437,462
+rotate:90
+Skin2/magic_hat
+bounds:861,1513,659,596
+offsets:1,1,661,598

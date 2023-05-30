@@ -11,7 +11,8 @@ namespace Ring
     {
         public Rigidbody2D _rigidbody;
         public SkeletonAnimation _skeletonAnimation;
-        public Collider _collider;
+        public BasePlayerController _girlController;
+        public BasePlayerController _boyController;
     }
     [Serializable]
     public class Player_Move
@@ -35,10 +36,12 @@ namespace Ring
         public float _timeTouch;
     }
     [Serializable]
-    public class Environment_Star
+    public class Prefabs_Environment
     {
         public Sprite _blackStar;
         public Sprite _yellowStar;
+        public GameObject _rock;
+        
     }
     
     

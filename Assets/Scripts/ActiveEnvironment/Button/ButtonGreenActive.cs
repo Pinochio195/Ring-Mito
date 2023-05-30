@@ -14,7 +14,7 @@ public class ButtonGreenActive : BaseCollider
     {
         float moveAmount = moveDirection == MoveDirection.Left ? -distanceX : distanceX;
         _startPosition = Wood.transform.position;
-        _endPosition = new Vector3(_startPosition.x + moveAmount, _startPosition.y, _startPosition.z);
+        _endPosition = _startPosition + Wood.transform.right*moveAmount;
     }
 
     private IEnumerator MoveWoodSmoothly(Vector3 moveDistance, float moveSpeed)

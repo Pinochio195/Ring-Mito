@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class PlusStar : BaseButton
 {
     [SerializeField] private GameObject _prefabsStar;
-    protected Vector3 targetPosition;
-    protected GameObject _star;
+    private Vector3 targetPosition;
+    private GameObject _star;
     private bool isMoving;
     public float movementSpeed = 5f;
     private int _indexCoin;
-
+    public GameObject _parentPrefabs;
     private void Update()
     {
         if (isMoving)
@@ -26,10 +26,13 @@ public class PlusStar : BaseButton
                 if (_star.transform.position == targetPosition)
                 {
                     // Biến mất
-                    Destroy(_star);
+                    //Destroy(_star);
                     CoinManager.Instance._listCoin[_indexCoin].GetComponent<SpriteRenderer>().color = Color.white;
                     isMoving = false;
-
+                    if (_parentPrefabs!=null)
+                    {
+                        _star.transform.SetParent(_parentPrefabs.transform);
+                    }
                     #region Tạo tutorial
 
                     if (GameManager.Instance._tutorials._countLevel.Equals("1"))

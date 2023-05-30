@@ -24,8 +24,8 @@ public class GameManager : MonoBehaviour
 
     [Space(10)] [HeaderTextColor(0.6f, 0.6f, 1, headerText = "Tutorials")]
     public Ring.Tutorials _tutorials;
-    [Space(10)] [HeaderTextColor(0.6f, 0.6f, 1, headerText = "Environmant - star")]
-    public Ring.Environment_Star _environmentStar;
+    [FormerlySerializedAs("prefabsEnvironment")] [FormerlySerializedAs("_environmentStar")] [Space(10)] [HeaderTextColor(0.6f, 0.6f, 1, headerText = "Environmant - star")]
+    public Ring.Prefabs_Environment _prefabsEnvironment;
 
     private void Awake()
     {

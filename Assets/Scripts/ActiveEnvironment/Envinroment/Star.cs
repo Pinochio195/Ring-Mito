@@ -29,7 +29,7 @@ public class Star : MonoBehaviour
                     }
                 }
                 // Biến mất
-                GameManager.Instance._star._listStar[_indexStar].GetComponent<Image>().sprite = GameManager.Instance._environmentStar._yellowStar;
+                GameManager.Instance._star._listStar[_indexStar].GetComponent<Image>().sprite = GameManager.Instance._prefabsEnvironment._yellowStar;
                 Destroy(gameObject);
                 isMoving = false;
             }
