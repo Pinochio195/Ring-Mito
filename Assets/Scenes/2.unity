@@ -1935,10 +1935,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3644402535307905914, guid: e52f8b5f9f65f9245941e9d11d16c096, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3644402536096223794, guid: e52f8b5f9f65f9245941e9d11d16c096, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1986,14 +1982,6 @@ PrefabInstance:
     - target: {fileID: 3644402536096223795, guid: e52f8b5f9f65f9245941e9d11d16c096, type: 3}
       propertyPath: m_Name
       value: Springs
-      objectReference: {fileID: 0}
-    - target: {fileID: 3644402536839118020, guid: e52f8b5f9f65f9245941e9d11d16c096, type: 3}
-      propertyPath: _force.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3644402536839118020, guid: e52f8b5f9f65f9245941e9d11d16c096, type: 3}
-      propertyPath: _force.y
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e52f8b5f9f65f9245941e9d11d16c096, type: 3}

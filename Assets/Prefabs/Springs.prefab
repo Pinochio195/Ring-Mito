@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3644402535307905924}
   - component: {fileID: 2030040733}
   - component: {fileID: 853560420}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: buc_loxo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ MonoBehaviour:
   _listActive: []
   distanceX: 0.5
   moveSpeed: 4
-  _force: {x: 2, y: 6}
+  _force: {x: 1.5, y: 7}
 --- !u!65 &161900520
 BoxCollider:
   m_ObjectHideFlags: 0

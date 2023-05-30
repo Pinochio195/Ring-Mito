@@ -11,7 +11,6 @@ public class PlusStar : BaseButton
     private bool isMoving;
     public float movementSpeed = 5f;
     private int _indexCoin;
-    public GameObject _parentPrefabs;
     private void Update()
     {
         if (isMoving)
@@ -28,10 +27,18 @@ public class PlusStar : BaseButton
                     // Biến mất
                     //Destroy(_star);
                     CoinManager.Instance._listCoin[_indexCoin].GetComponent<SpriteRenderer>().color = Color.white;
+                    _indexCoin = 0;
                     isMoving = false;
-                    if (_parentPrefabs!=null)
+                    /*if (_parentPrefabs!=null)
                     {
                         _star.transform.SetParent(_parentPrefabs.transform);
+                    }*/
+                    for (int i = 0; i <  CoinManager.Instance._listCoin.Count; i++)
+                    {
+                        if (CoinManager.Instance._listCoin[_indexCoin].GetComponent<SpriteRenderer>().color == Color.white)
+                        {
+                            _star.transform.SetParent(CoinManager.Instance._listCoin[i].transform);
+                        }
                     }
                     #region Tạo tutorial
 

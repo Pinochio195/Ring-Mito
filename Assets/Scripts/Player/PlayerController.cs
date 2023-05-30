@@ -121,13 +121,15 @@ public class PlayerController : BasePlayerController
 
     protected override void OnClickObject()
     {
-        if (_playerComponent._girlController.enabled)
+        if (_playerComponent._girlController != null && _playerComponent._boyController != null)
         {
-            _playerComponent._girlController.enabled = false;
+            if (_playerComponent._girlController.enabled)
+            {
+                _playerComponent._girlController.enabled = false;
+            }
+
+            _playerComponent._boyController.enabled = true;
         }
-        _playerComponent._boyController.enabled = true;
-        
-        
     }
 
     #endregion
