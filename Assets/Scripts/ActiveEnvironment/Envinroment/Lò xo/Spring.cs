@@ -46,7 +46,7 @@ public class Spring : BaseTouch
 
     private IEnumerator MoveWoodSmoothly(Vector3 moveDistance, float moveSpeed)
     {
-        gameObject.GetComponent<Collider2D>().enabled = false;
+        gameObject.GetComponent<Collider>().enabled = false;
         Vector3 startPosition = Wood.transform.position;
         Vector3 targetPosition = startPosition + moveDistance;
 
@@ -68,7 +68,6 @@ public class Spring : BaseTouch
 
             if (PlayerController.Instance._playerJump.isCheckOnSpring)
             {
-                Debug.Log(123);
                 PlayerController.Instance._playerComponent._rigidbody.velocity = new Vector2((PlayerController.Instance._playerComponent._skeletonAnimation.skeleton.ScaleX > 0 ? _force.x : -_force.x),_force.y);
             }
             yield return null;
@@ -105,6 +104,6 @@ public class Spring : BaseTouch
             isMoved = false;
         }
 
-        gameObject.GetComponent<Collider2D>().enabled = true;
+        gameObject.GetComponent<Collider>().enabled = true;
     }
 }

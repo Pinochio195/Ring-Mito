@@ -15,6 +15,9 @@ public class MoveRightButton : BaseButton
     protected override void OnPress()
     {
         // Di chuyển Player sang phải khi nút được nhấn và giữ
+        if (PlayerController2.Instance != null)
+        {
+            
         if (PlayerController.Instance.enabled&&!PlayerController2.Instance.enabled)
         {
             PlayerController.Instance.StartMovingRight();
@@ -24,19 +27,31 @@ public class MoveRightButton : BaseButton
         {
             PlayerController2.Instance.StartMovingRight();
         }
+        }
+        else
+        {
+            PlayerController.Instance.StartMovingRight();
+        }
     }
 
     protected override void OnRelease()
     {
-        // Dừng di chuyển Player sang phải khi nút được nhả
-        if (PlayerController.Instance.enabled&&!PlayerController2.Instance.enabled)
+        if (PlayerController2.Instance != null)
+        {
+            // Dừng di chuyển Player sang phải khi nút được nhả
+            if (PlayerController.Instance.enabled && !PlayerController2.Instance.enabled)
+            {
+                PlayerController.Instance.StopMovingRight();
+            }
+
+            if (PlayerController2.Instance.enabled && !PlayerController.Instance.enabled)
+            {
+                PlayerController2.Instance.StopMovingRight();
+            }
+        }
+        else
         {
             PlayerController.Instance.StopMovingRight();
-        }
-
-        if (PlayerController2.Instance.enabled&&!PlayerController.Instance.enabled)
-        {
-            PlayerController2.Instance.StopMovingRight();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Ring
     [Serializable]
     public class Player_Component
     {
-        public Rigidbody2D _rigidbody;
+        public Rigidbody _rigidbody;
         public SkeletonAnimation _skeletonAnimation;
         public BasePlayerController _girlController;
         public BasePlayerController _boyController;

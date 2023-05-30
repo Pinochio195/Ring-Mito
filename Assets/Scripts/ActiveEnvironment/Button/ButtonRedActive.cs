@@ -41,7 +41,7 @@ public class ButtonRedActive : BaseTouch
 
     private IEnumerator MoveWoodSmoothly(Vector3 moveDistance, float moveSpeed)
     {
-        gameObject.GetComponent<Collider2D>().enabled = false;
+        gameObject.GetComponent<Collider>().enabled = false;
         Vector3 startPosition = Wood.transform.position;
         Vector3 targetPosition = startPosition + moveDistance;
 
@@ -63,12 +63,12 @@ public class ButtonRedActive : BaseTouch
 
             yield return null;
         }
-        gameObject.GetComponent<Collider2D>().enabled = true;
         if (GameManager.Instance._tutorials._enumTutorials == Ring.Tutorials.EnumTutorials.Step4)
         {
             GameManager.Instance._tutorials._enumTutorials = Ring.Tutorials.EnumTutorials.StepEnd;
             GameManager.Instance._tutorials.ischeckState = true;
         }
+        gameObject.GetComponent<Collider>().enabled = true;
     }
   
 }

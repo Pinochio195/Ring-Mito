@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class Star : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _rigidbody2D;
-    [SerializeField] private BoxCollider2D _boxCollider;
+    [SerializeField] private Rigidbody _rigidbody2D;
+    [SerializeField] private BoxCollider _boxCollider;
     public Vector3 targetPosition; // Vị trí B
     public float movementSpeed = 1f; // Tốc độ di chuyển
     private int _indexStar;
@@ -58,7 +58,7 @@ public class Star : MonoBehaviour
         #endregion
     }
     
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
         {

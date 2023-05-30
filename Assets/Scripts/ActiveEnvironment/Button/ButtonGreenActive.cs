@@ -34,7 +34,7 @@ public class ButtonGreenActive : BaseCollider
         Wood.transform.position = moveDistance;
     }
 
-    protected override void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -50,7 +50,7 @@ public class ButtonGreenActive : BaseCollider
         }
     }
 
-    protected override void OnTriggerExit2D(Collider2D collision)
+    protected override void OnTriggerExit(Collider collision)
     {
         if (collision.CompareTag("Player"))
         {

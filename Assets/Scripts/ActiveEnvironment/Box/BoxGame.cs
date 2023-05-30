@@ -15,7 +15,7 @@ public class BoxGame : MonoBehaviour
         _skeletonAnimation.AnimationName = "close";
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
         {

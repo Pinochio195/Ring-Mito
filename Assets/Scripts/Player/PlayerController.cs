@@ -136,9 +136,9 @@ public class PlayerController : BasePlayerController
 
     void CheckPlayerJump()
     {
-        _playerJump.isCheckGround = Physics2D.Raycast(_playerJump.groundCheckTransform.position, Vector2.down,
+        _playerJump.isCheckGround = Physics.Raycast(_playerJump.groundCheckTransform.position, Vector3.down,
             _playerJump.rayDistance, LayerMask.GetMask("Ground", "GroundLow"));
-        Debug.DrawRay(_playerJump.groundCheckTransform.position, Vector2.down * _playerJump.rayDistance, Color.red);
+        Debug.DrawRay(_playerJump.groundCheckTransform.position, Vector3.down * _playerJump.rayDistance, Color.red);
         if (_playerJump.isCheckGround && !_playerMove.isMovingLeft && !_playerMove.isMovingRight &&
             (_playerComponent._skeletonAnimation.AnimationName == "walk" ||
              _playerComponent._skeletonAnimation.AnimationName == "jump1"))

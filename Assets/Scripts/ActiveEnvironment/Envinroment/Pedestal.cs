@@ -91,20 +91,23 @@ public class Pedestal : BaseTouch
     private IEnumerator MoveWoodSmoothly(Vector3 moveDistance, float moveSpeed)
     {
         isRotating = true;
-        gameObject.GetComponent<Collider2D>().enabled = false;
+        gameObject.GetComponent<Collider>().enabled = false;
         Vector3 startPosition = Wood.transform.position;
         Vector3 targetPosition = startPosition + moveDistance;
 
         float distanceRemaining = moveDistance.magnitude;
         float elapsedTime = 0f;
+
+        Rigidbody woodRigidbody = Wood.GetComponent<Rigidbody>();
+
         while (distanceRemaining > 0.01f)
         {
             // Tính toán vị trí mới dựa trên tốc độ và thời gian
             float step = moveSpeed * Time.deltaTime;
             Vector3 newPosition = Vector3.MoveTowards(Wood.transform.position, targetPosition, step);
 
-            // Cập nhật vị trí của đối tượng
-            Wood.transform.position = newPosition;
+            // Cập nhật vị trí của đối tượng bằng MovePosition
+            woodRigidbody.MovePosition(newPosition);
 
             // Cập nhật khoảng cách và thời gian đã di chuyển
             float distanceMoved = Vector3.Distance(startPosition, newPosition);
@@ -124,6 +127,7 @@ public class Pedestal : BaseTouch
         }
 
         #endregion
-        gameObject.GetComponent<Collider2D>().enabled = true;
+        gameObject.GetComponent<Collider>().enabled = true;
     }
+
 }

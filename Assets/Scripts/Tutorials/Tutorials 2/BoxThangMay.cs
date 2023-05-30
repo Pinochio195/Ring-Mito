@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class BoxThangMay : MonoBehaviour
 {
-    [SerializeField] private Collider2D _boxStep3;
-    [SerializeField] private Collider2D _collider;
-    private void OnTriggerEnter2D(Collider2D col)
+    [SerializeField] private Collider _boxStep3;
+    [SerializeField] private Collider _collider;
+    private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("Player"))
         {

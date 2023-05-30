@@ -8,9 +8,9 @@ public abstract class BaseCollider : MonoBehaviour
     [SerializeField] protected MoveDirection moveDirection = MoveDirection.Left;
     [SerializeField] protected List<GameObject> _listActive;
 
-    protected abstract void OnTriggerEnter2D(Collider2D collision);
+    protected abstract void OnTriggerEnter(Collider collision);
 
-    protected abstract void OnTriggerExit2D(Collider2D collision);
+    protected abstract void OnTriggerExit(Collider collision);
 
     protected void EnableButton()
     {
