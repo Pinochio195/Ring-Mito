@@ -5,29 +5,29 @@ using UnityEngine;
 
 public class TouchStick : BaseCollider
 {
-    //[SerializeField] private Rigidbody2D _rigidbody2D;
+    [SerializeField] private Rigidbody _rigidbody2D;
     private bool isCheck;
-    private Vector2 _direction;
+    private Vector3 _direction;
     public float _speed;
     private void Update()
     {
         if (isCheck)
         {
-            Wood.GetComponent<Rigidbody2D>().velocity = _direction*_speed;
+            Wood.GetComponent<Rigidbody>().velocity = _direction*_speed;
         }
     }
 
     private void OnMouseDown()
     {
         isCheck = true;
-        //_rigidbody2D.isKinematic = false;
+        _rigidbody2D.isKinematic = false;
         if (moveDirection == MoveDirection.Right)
         {
-            _direction = Vector2.up;
+            _direction = Vector3.up;
         }
         else
         {
-            _direction = Vector2.down;
+            _direction = Vector3.down;
         }
         #region Tutorials
 

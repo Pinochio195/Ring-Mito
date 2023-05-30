@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3644402535307905925}
   - component: {fileID: 3644402535307905924}
-  - component: {fileID: 3644402535307905927}
   - component: {fileID: 2030040733}
+  - component: {fileID: 853560420}
   m_Layer: 0
   m_Name: buc_loxo
   m_TagString: Untagged
@@ -87,32 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3644402535307905927
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3644402535307905914}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.09454951}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 0.96}
-    newSize: {x: 1.4, y: 0.96}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.4, y: 0.770901}
-  m_EdgeRadius: 0
 --- !u!114 &2030040733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +99,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dffd103658aa814f99aa659f1ed4adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &853560420
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3644402535307905914}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 0.7718858, z: 1.176979}
+  m_Center: {x: 0, y: -0.0940571, z: 0.064654976}
 --- !u!1 &3644402535473346014
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,8 +324,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3644402536839118010}
   - component: {fileID: 3644402536839118021}
-  - component: {fileID: 3644402536839118023}
   - component: {fileID: 3644402536839118020}
+  - component: {fileID: 161900520}
   m_Layer: 10
   m_Name: LoXo
   m_TagString: Untagged
@@ -413,32 +400,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3644402536839118023
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3644402536839118011}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1, y: 2}
-    newSize: {x: 1.1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1, y: 2}
-  m_EdgeRadius: 0
 --- !u!114 &3644402536839118020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,4 +417,17 @@ MonoBehaviour:
   _listActive: []
   distanceX: 0.5
   moveSpeed: 4
-  _force: {x: 2, y: 9}
+  _force: {x: 2, y: 6}
+--- !u!65 &161900520
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3644402536839118011}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.96318936, y: 2, z: 3.4832695}
+  m_Center: {x: 0.018656109, y: 0, z: 0.4332711}
