@@ -119,6 +119,8 @@ public class PlayerController : BasePlayerController
         base.StopMovingRight();
     }
 
+
+    #endregion
     protected override void OnClickObject()
     {
         if (_playerComponent._girlController != null && _playerComponent._boyController != null)
@@ -129,10 +131,10 @@ public class PlayerController : BasePlayerController
             }
 
             _playerComponent._boyController.enabled = true;
+            _playerComponent._girlController.gameObject.transform.Find("Arrow").gameObject.SetActive(false);
+            _playerComponent._boyController.gameObject.transform.Find("Arrow").gameObject.SetActive(true);
         }
     }
-
-    #endregion
 
     #region Check Player trên không để jump
 

@@ -109,8 +109,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8463780939243816778}
-  - component: {fileID: 8463780939243816779}
-  - component: {fileID: 8463780939243816772}
+  - component: {fileID: 8463780939860479822}
+  - component: {fileID: 8463780939860479823}
   - component: {fileID: 964972513}
   m_Layer: 9
   m_Name: Player2
@@ -136,43 +136,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &8463780939243816779
-CapsuleCollider2D:
+--- !u!136 &8463780939860479822
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8463780939243816777}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.36759806}
-  m_Size: {x: 0.5, y: 0.7787099}
-  m_Direction: 0
---- !u!50 &8463780939243816772
-Rigidbody2D:
-  serializedVersion: 4
+  m_Enabled: 1
+  m_Radius: 0.32004428
+  m_Height: 0.7555585
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.39110613, z: 0}
+--- !u!54 &8463780939860479823
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8463780939243816777}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  serializedVersion: 2
   m_Mass: 1
-  m_LinearDrag: 0
+  m_Drag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: 425fdc8fae5425248a349ba38078a5b7, type: 2}
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_Constraints: 120
   m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &964972513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerComponent:
-    _rigidbody: {fileID: 8463780939243816772}
+    _rigidbody: {fileID: 0}
     _skeletonAnimation: {fileID: 8463780939307663653}
     _girlController: {fileID: 964972513}
     _boyController: {fileID: 0}
@@ -256,7 +249,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 72ce2b53de86dbd4e8abbfd9c0ea7847, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

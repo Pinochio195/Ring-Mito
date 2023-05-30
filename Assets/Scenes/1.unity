@@ -1567,17 +1567,9 @@ PrefabInstance:
       propertyPath: Wood
       value: 
       objectReference: {fileID: 1759371902}
-    - target: {fileID: 473189348, guid: 83253fae206178c499afb6fd8443a52a, type: 3}
-      propertyPath: moveDirection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1263791439817172597, guid: 83253fae206178c499afb6fd8443a52a, type: 3}
       propertyPath: m_Name
       value: Green-Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 1263791439817172597, guid: 83253fae206178c499afb6fd8443a52a, type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1263791439817172598, guid: 83253fae206178c499afb6fd8443a52a, type: 3}
       propertyPath: m_RootOrder

@@ -74,5 +74,7 @@ public class PlayerController2 : BasePlayerController
             _playerComponent._boyController.enabled = false;
         }
         _playerComponent._girlController.enabled = true;
+        _playerComponent._boyController.gameObject.transform.Find("Arrow").gameObject.SetActive(false);
+        _playerComponent._girlController.gameObject.transform.Find("Arrow").gameObject.SetActive(true);
     }
 }

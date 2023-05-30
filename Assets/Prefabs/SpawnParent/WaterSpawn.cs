@@ -15,7 +15,25 @@ public class WaterSpawn : MonoBehaviour
         //Keysave.ac_SoundWaterOff += OffSoundWater;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Lava"))
+        {
+            WaterSpawn_Rock.Instance._listObjectLava.ForEach(item => item.SetActive(false));
+            if (!WaterSpawn_Rock.Instance.isCheckTouchLava)
+            {
+                WaterSpawn_Rock.Instance.isCheckTouchLava = true;
+                StartCoroutine(DelayDisable());
+                for (int i = 0; i < 10; i++)
+                {
+                    Instantiate(GameManager.Instance._prefabsEnvironment._rock, new Vector2(transform.position.x+Random.Range(-WaterSpawn_Rock.Instance._randomSpawn,WaterSpawn_Rock.Instance._randomSpawn),transform.position.y),
+                        Quaternion.identity);
+                }
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider collision)
     {
         if (collision.CompareTag("Lava"))
         {

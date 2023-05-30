@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 1263791439817172598}
   - component: {fileID: 473189348}
   - component: {fileID: 1662727629}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Green-Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Wood: {fileID: 0}
-  moveDirection: 0
+  moveDirection: 1
   _listActive:
   - {fileID: 1263791438914918388}
   distanceX: 2
