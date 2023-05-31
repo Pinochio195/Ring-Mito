@@ -37278,7 +37278,7 @@ MonoBehaviour:
   - {fileID: 7375336423709218628}
   - {fileID: 8032342778981591810}
   isCheckTouchLava: 0
-  _randomSpawn: 0.5
+  _randomSpawn: 0.21
 --- !u!1 &2892772374995563411
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ TagManager:
   - Star
   - Water
   - Lava
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Environment
   - Box
   - Lava
-  - 
+  - Enemy
   - 
   - 
   - 

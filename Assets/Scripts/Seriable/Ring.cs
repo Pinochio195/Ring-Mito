@@ -15,6 +15,12 @@ namespace Ring
         public BasePlayerController _boyController;
     }
     [Serializable]
+    public class Enemy_Component
+    {
+        public Rigidbody _rigidbody;
+        public SkeletonAnimation _skeletonAnimation;
+    }
+    [Serializable]
     public class Player_Move
     {
         public float Speed_Move;

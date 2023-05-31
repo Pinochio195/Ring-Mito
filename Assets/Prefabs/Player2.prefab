@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerComponent:
-    _rigidbody: {fileID: 0}
+    _rigidbody: {fileID: 8463780939860479823}
     _skeletonAnimation: {fileID: 8463780939307663653}
     _girlController: {fileID: 964972513}
     _boyController: {fileID: 0}

@@ -38,7 +38,7 @@ public abstract class BasePlayerController : MonoBehaviour
     {
         _playerMove.isMovingLeft = false;
         _playerComponent._skeletonAnimation.AnimationName = "idle";
-        if (_playerComponent._rigidbody.velocity != Vector3.zero)
+        if (_playerComponent._rigidbody.velocity != Vector3.zero && PlayerController.Instance._playerJump.isCheckGround)
         {
             _playerComponent._rigidbody.velocity = Vector3.zero;
         }
@@ -56,7 +56,7 @@ public abstract class BasePlayerController : MonoBehaviour
         _playerMove.isMovingRight = false;
         _playerComponent._skeletonAnimation.AnimationName = "idle";
 
-        if (_playerComponent._rigidbody.velocity != Vector3.zero)
+        if (_playerComponent._rigidbody.velocity != Vector3.zero&& PlayerController.Instance._playerJump.isCheckGround)
         {
             _playerComponent._rigidbody.velocity = Vector3.zero;
         }
