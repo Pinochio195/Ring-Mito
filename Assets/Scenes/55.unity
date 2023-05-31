@@ -322,7 +322,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 61e48b89ec2757b478a2e6cbe2eca91a, type: 2}
+  - {fileID: 1438476815}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1189,6 +1189,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5896499, y: 0.54, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!21 &1438476815
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NoRender Material
+  m_Shader: {fileID: 4800000, guid: 913475501bf19374c84390868a9d6d3d, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats: []
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1 &1478547423 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3059885578618092133, guid: 9d1d1c21525add14eae4acd8eed277ac, type: 3}
@@ -1979,7 +2003,7 @@ PrefabInstance:
     - target: {fileID: 5976168771707699258, guid: bc061202e895fd34dacbc1474da6d630, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5acaddcb97b479541a025dc5a66e7411, type: 2}
+      objectReference: {fileID: 1438476815}
     - target: {fileID: 5976168771707699259, guid: bc061202e895fd34dacbc1474da6d630, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -2252,5 +2276,9 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5782336885473379466, guid: a98be2e3db96887498277fdb75dceb39, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1438476815}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a98be2e3db96887498277fdb75dceb39, type: 3}
