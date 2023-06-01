@@ -9,6 +9,9 @@ TagManager:
   - Water
   - Lava
   - Enemy
+  - Portal
+  - Rock
+  - Player2
   layers:
   - Default
   - TransparentFX
@@ -24,8 +27,8 @@ TagManager:
   - Box
   - Lava
   - Enemy
-  - 
-  - 
+  - Portal
+  - Balloon
   - 
   - 
   - 

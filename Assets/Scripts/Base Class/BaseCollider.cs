@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class BaseCollider : MonoBehaviour
 {
-    public enum MoveDirection { Left, Right }
+    protected enum MoveDirection { Left, Right }
     [SerializeField] protected GameObject Wood;
     [SerializeField] protected MoveDirection moveDirection = MoveDirection.Left;
     [SerializeField] protected List<GameObject> _listActive;

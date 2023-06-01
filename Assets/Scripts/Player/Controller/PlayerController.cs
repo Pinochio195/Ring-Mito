@@ -166,7 +166,6 @@ public class PlayerController : BasePlayerController, ICollWithPlayer
 
     public void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.gameObject.tag);
         if (other.gameObject.CompareTag("Lava") || other.gameObject.CompareTag("Enemy"))
         {
             #region Ngừng không cho di chuyển khi thua
@@ -179,6 +178,16 @@ public class PlayerController : BasePlayerController, ICollWithPlayer
             GameManager.Instance._star._listButton.ForEach(item=>item.SetActive(false));
             PlayAnimation("hurt", () => { PlayAnimation("die", null, false); }, false);
         }
+    }
+
+    public void OnTriggerExit(Collider collision)
+    {
+        
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        
     }
 
     #region Thực hiện xong animation hurt => die và dừng ở frame cuối

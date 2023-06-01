@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Ring;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class BasePlayerController : MonoBehaviour
 {
@@ -65,6 +66,10 @@ public abstract class BasePlayerController : MonoBehaviour
     private void OnMouseDown()
     {
         OnClickObject();
+        GameManager.Instance._star._listButton.ForEach(item =>
+        {
+            item.GetComponent<Image>().raycastTarget = true;
+        });
     }
     protected abstract void OnClickObject();
 }

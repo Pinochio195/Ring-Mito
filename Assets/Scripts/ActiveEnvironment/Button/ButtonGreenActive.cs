@@ -14,7 +14,7 @@ public class ButtonGreenActive : BaseCollider
     {
         float moveAmount = moveDirection == MoveDirection.Left ? -distanceX : distanceX;
         _startPosition = Wood.transform.position;
-        _endPosition = _startPosition + Wood.transform.right*moveAmount;
+        _endPosition = _startPosition + Wood.transform.right * moveAmount;
     }
 
     private IEnumerator MoveWoodSmoothly(Vector3 moveDistance, float moveSpeed)
@@ -36,7 +36,7 @@ public class ButtonGreenActive : BaseCollider
 
     protected override void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") || collision.CompareTag("Rock")|| collision.CompareTag("Player2"))
         {
             DisableButton();
             if (Wood != null)
@@ -52,7 +52,7 @@ public class ButtonGreenActive : BaseCollider
 
     protected override void OnTriggerExit(Collider collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") || collision.CompareTag("Rock")|| collision.CompareTag("Player2"))
         {
             EnableButton();
             if (Wood != null)
