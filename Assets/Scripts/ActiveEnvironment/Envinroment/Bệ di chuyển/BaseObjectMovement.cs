@@ -10,16 +10,15 @@ public class BaseObjectMovement : MonoBehaviour
     public AudioSource _audio;
     public List<Transform> _listTargetTransforms; // Danh sách các transform mục tiêu
     public float speed = 3f; // Tốc độ di chuyển của object
-    protected int currentTargetIndex = 0; // Chỉ số của transform hiện tại trong danh sách
+    [SerializeField]protected int currentTargetIndex = 0; // Chỉ số của transform hiện tại trong danh sách
     public bool isCheckMove;
     public bool isCheckClick;
-    
     public virtual void Update()
     {
         if (isCheckMove)
         {
             // Kiểm tra nếu object đã đến được transform cuối cùng
-            if (currentTargetIndex >= _listTargetTransforms.Count )
+            if (currentTargetIndex >= _listTargetTransforms.Count)
             {
                 // Dừng di chuyển
                 _listTargetTransforms.Reverse();

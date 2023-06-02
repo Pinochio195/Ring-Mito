@@ -3583,6 +3583,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8512149004339711840, guid: 4bf18acfa4f4ca343b43cce109373098, type: 3}
+      propertyPath: _breakPoint
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512149004339711840, guid: 4bf18acfa4f4ca343b43cce109373098, type: 3}
       propertyPath: _listTargetTransforms.Array.size
       value: 4
       objectReference: {fileID: 0}
