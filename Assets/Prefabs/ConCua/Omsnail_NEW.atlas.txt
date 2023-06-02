@@ -1,0 +1,45 @@
+Omsnail_NEW.png
+	size: 926, 926
+	filter: Linear, Linear
+	pma: true
+chan1
+	bounds: 714, 209, 150, 164
+	offsets: 0, 0, 188, 164
+chan2
+	bounds: 356, 28, 124, 166
+	rotate: 90
+chan3
+	bounds: 524, 23, 124, 166
+	rotate: 90
+chan4
+	bounds: 714, 375, 150, 167
+dau
+	bounds: 2, 236, 355, 270
+	offsets: 1, 1, 365, 272
+mat thuong
+	bounds: 572, 735, 352, 189
+	offsets: 1, 1, 354, 191
+mat_buon
+	bounds: 550, 149, 357, 162
+	rotate: 90
+mat_chet
+	bounds: 2, 45, 352, 189
+mat_cuoi
+	bounds: 572, 544, 352, 189
+	offsets: 1, 1, 354, 191
+mat_nham
+	bounds: 359, 154, 352, 189
+	offsets: 1, 1, 354, 191
+	rotate: 90
+mom
+	bounds: 714, 127, 129, 80
+	offsets: 1, 1, 131, 82
+mom_buon
+	bounds: 866, 516, 58, 26
+	offsets: 1, 2, 59, 28
+momcuoi
+	bounds: 572, 515, 58, 27
+	offsets: 1, 1, 60, 33
+than
+	bounds: 2, 508, 568, 416
+	offsets: 1, 1, 570, 418

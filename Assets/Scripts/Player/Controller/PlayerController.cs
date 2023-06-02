@@ -124,17 +124,7 @@ public class PlayerController : BasePlayerController, ICollWithPlayer
 
     protected override void OnClickObject()
     {
-        if (_playerComponent._girlController != null && _playerComponent._boyController != null)
-        {
-            if (_playerComponent._girlController.enabled)
-            {
-                _playerComponent._girlController.enabled = false;
-            }
-
-            _playerComponent._boyController.enabled = true;
-            _playerComponent._girlController.gameObject.transform.Find("Arrow").gameObject.SetActive(false);
-            _playerComponent._boyController.gameObject.transform.Find("Arrow").gameObject.SetActive(true);
-        }
+        
     }
 
     #region Check Player trên không để jump
@@ -142,7 +132,7 @@ public class PlayerController : BasePlayerController, ICollWithPlayer
     void CheckPlayerJump()
     {
         _playerJump.isCheckGround = Physics.Raycast(_playerJump.groundCheckTransform.position, Vector3.down,
-            _playerJump.rayDistance, LayerMask.GetMask("Ground", "GroundLow"));
+            _playerJump.rayDistance, LayerMask.GetMask("Ground", "GroundLow","Environment","Box"));
         Debug.DrawRay(_playerJump.groundCheckTransform.position, Vector3.down * _playerJump.rayDistance, Color.red);
         if (_playerJump.isCheckGround && !_playerMove.isMovingLeft && !_playerMove.isMovingRight &&
             (_playerComponent._skeletonAnimation.AnimationName == "walk" ||

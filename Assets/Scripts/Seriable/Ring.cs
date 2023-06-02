@@ -11,6 +11,10 @@ namespace Ring
     {
         public Rigidbody _rigidbody;
         public SkeletonAnimation _skeletonAnimation;
+    }
+    [Serializable]
+    public class Player_Touch
+    {
         public BasePlayerController _girlController;
         public BasePlayerController _boyController;
     }

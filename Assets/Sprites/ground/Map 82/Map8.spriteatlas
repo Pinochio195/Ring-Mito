@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Map8
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: b3945904c36007b4c993a5c3d30a055a, type: 3}
+    - {fileID: 102900000, guid: c726cebd0fbcffe4e953d03f5fff5d54, type: 3}
+    - {fileID: 102900000, guid: 31b480713ff65114ab2c2772e971234f, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 621380313fb3ae64ca45384a451d2976, type: 3}
+  - {fileID: 21300000, guid: 0bba3ab22750eee46ad1f22e6e7febae, type: 3}
+  - {fileID: 21300000, guid: 6339be6824053f442bbb8e0f579fd207, type: 3}
+  - {fileID: 21300000, guid: e59c05d8a7e486942b9b087755136f8d, type: 3}
+  - {fileID: 21300000, guid: 6a2959a9b5af76a4499896cec050ba3e, type: 3}
+  - {fileID: 21300000, guid: a18bbe1b0a7885e4c8b0fa4c1a5f295d, type: 3}
+  - {fileID: 21300000, guid: 9f7759db0e041d3458d9c6c26f6f1405, type: 3}
+  - {fileID: 21300000, guid: 71c2e07cc58707544b81b9c459f481ea, type: 3}
+  - {fileID: 21300000, guid: b3f970ac284eacb4da8b348bcb501c8f, type: 3}
+  - {fileID: 21300000, guid: 8fa3c48d2ea6c4b46bb65ca8455918e7, type: 3}
+  - {fileID: 21300000, guid: b6a2dadd4f5fca542b81f96c382aa772, type: 3}
+  - {fileID: 21300000, guid: b09922ed83897464c974cc263a9abacb, type: 3}
+  - {fileID: 21300000, guid: dba7bbeee5a877b4188e3f051593914d, type: 3}
+  - {fileID: 21300000, guid: 490003af9db9b6a4395df36db2a9869e, type: 3}
+  - {fileID: 21300000, guid: 662c7abf70a196e43994868fd5a88c19, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - tile
+  - decor 3 day
+  - Jungle-2
+  - Layer 4
+  - ground
+  - tile3
+  - decor 5 day
+  - tile4
+  - decor 2 day
+  - Jungle-3
+  - Layer 1
+  - tile5
+  - tile2
+  - decor 4 day
+  - decor 1 day
+  m_RenderDataMap: {}
+  m_Tag: Map8
+  m_IsVariant: 0

@@ -27,6 +27,9 @@ public class PortalManager : MonoBehaviour
 
     public GameObject _portal1;
     public GameObject _portal2;
+    public GameObject _portal3;
+    public GameObject _portal4;
+
     // Start is called before the first frame update
     void Start()
     {

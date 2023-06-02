@@ -23,21 +23,38 @@ public class WaterSpawn : MonoBehaviour
             if (!WaterSpawn_Rock.Instance.isCheckTouchLava)
             {
                 WaterSpawn_Rock.Instance.isCheckTouchLava = true;
-                StartCoroutine(DelayDisable());
+                GameObject _water;
                 for (int i = 0; i < 10; i++)
                 {
-                    Instantiate(GameManager.Instance._prefabsEnvironment._rock, new Vector2(transform.position.x+Random.Range(-WaterSpawn_Rock.Instance._randomSpawn,WaterSpawn_Rock.Instance._randomSpawn),transform.position.y),
+                    Instantiate(GameManager.Instance._prefabsEnvironment._rock,
+                        new Vector2(
+                            transform.position.x + Random.Range(-WaterSpawn_Rock.Instance._randomSpawn,
+                                WaterSpawn_Rock.Instance._randomSpawn), transform.position.y),
                         Quaternion.identity);
+                }
+                if (WaterSpawn_Rock.Instance._listObjectWater.Count > 0)
+                {
+                    StartCoroutine(DelayDisable());
+                }
+                else
+                {
+                    if (PlayerController2.Instance._waterGameObject.activeSelf)
+                    {
+                        //StartCoroutine(DelayGameObject());
+                    }
                 }
             }
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+    }
+
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.CompareTag("Lava"))
+        /*if (collision.CompareTag("Lava"))
         {
-            WaterSpawn_Rock.Instance._listObjectLava.ForEach(item => item.SetActive(false));
             if (!WaterSpawn_Rock.Instance.isCheckTouchLava)
             {
                 WaterSpawn_Rock.Instance.isCheckTouchLava = true;
@@ -48,12 +65,17 @@ public class WaterSpawn : MonoBehaviour
                         Quaternion.identity);
                 }
             }
-        }
+        }*/
     }
 
     IEnumerator DelayDisable()
     {
-        yield return new WaitForSeconds(.75f);
+        yield return new WaitForSeconds(1.5f);
         WaterSpawn_Rock.Instance._listObjectWater.ForEach(item => item.SetActive(false));
+    }
+    IEnumerator DelayGameObject()
+    {
+        yield return new WaitForSeconds(1.5f);
+        PlayerController2.Instance._waterGameObject.SetActive(false);
     }
 }

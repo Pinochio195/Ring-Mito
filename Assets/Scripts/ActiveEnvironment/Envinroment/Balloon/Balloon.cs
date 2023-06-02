@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Balloon : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class Balloon : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log(123);
         BalloonManager.Instance.isCheckClickDestroyBalloon = true;
+        GameManager.Instance._star._listButton.ForEach(item =>
+        {
+            item.GetComponent<Image>().raycastTarget = true;
+        });
     }
 }

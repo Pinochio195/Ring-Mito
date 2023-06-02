@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Map6
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: eea8d5c8cd86c04488c09bb65e7ed52a, type: 3}
+    - {fileID: 102900000, guid: 6b39c9641be16a44abd6ebddc4d5cfaa, type: 3}
+    - {fileID: 102900000, guid: f0b8b9c95139fd9408f1c7aa5ed6040b, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: de9a7490af080284295ae99e6bd2a4ce, type: 3}
+  - {fileID: 21300000, guid: 7e4f9111d2e1d8f4693b30f9287d10f5, type: 3}
+  - {fileID: 21300000, guid: a0efb4d38a192dc4fb0b4e01f0612c6c, type: 3}
+  - {fileID: 21300000, guid: 20f5ff348457fe645ac699ea65d75266, type: 3}
+  - {fileID: 21300000, guid: bc2ac7d4edcb4df488043a79f719849b, type: 3}
+  - {fileID: 21300000, guid: b2843da602f09de4090ecd4000a1f1f0, type: 3}
+  - {fileID: 21300000, guid: f7f7f937f6671bb42991f12dcd4b4b22, type: 3}
+  - {fileID: 21300000, guid: 156dff37b5074364fa8ff90e6603b604, type: 3}
+  - {fileID: 21300000, guid: 31f0287b16a65534f9ab3f300096bf59, type: 3}
+  - {fileID: 21300000, guid: c2413c1c3e8f3e848a288aaf7e1672f4, type: 3}
+  - {fileID: 21300000, guid: 4356c99ee185ce1428b755075e2cfb65, type: 3}
+  - {fileID: 21300000, guid: 356bd3cecff564e4289e82e135ed04b4, type: 3}
+  - {fileID: 21300000, guid: d1b00e0ff0ef0a246a39ff245071ded8, type: 3}
+  - {fileID: 21300000, guid: 68e8912f2b4359343b49b9bec7fd6fbf, type: 3}
+  - {fileID: 21300000, guid: b9cf138f8d3b2144380f85dd9cabd142, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - decor 3
+  - Layer 1
+  - ground
+  - Jungle-2
+  - decor 5
+  - tile 4
+  - decor 4
+  - tile 3
+  - tile 2
+  - tile 5
+  - tile 1
+  - Layer 4
+  - Jungle-3
+  - decor 1
+  - decor 2
+  m_RenderDataMap: {}
+  m_Tag: Map6
+  m_IsVariant: 0

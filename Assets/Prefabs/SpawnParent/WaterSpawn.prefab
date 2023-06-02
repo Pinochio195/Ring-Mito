@@ -5358,7 +5358,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1836475748
 Rigidbody:
@@ -5374,7 +5374,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &486309653846302778
 GameObject:
@@ -5655,7 +5655,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &597879813
 Rigidbody:
@@ -5671,7 +5671,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &707578783313635476
 GameObject:
@@ -16225,7 +16225,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1357368147
 Rigidbody:
@@ -16241,7 +16241,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &1030257220003376705
 GameObject:
@@ -16352,7 +16352,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &61319575
 Rigidbody:
@@ -16368,7 +16368,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &1085968225259558514
 GameObject:
@@ -31785,7 +31785,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &704686493
 Rigidbody:
@@ -31801,7 +31801,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &2163231426595269693
 GameObject:
@@ -37170,7 +37170,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2800725489945902425}
-  - component: {fileID: 2800725490922112747}
   m_Layer: 4
   m_Name: WaterSpawn
   m_TagString: Water
@@ -37218,67 +37217,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2800725490922112747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2800725489945902426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f057ba3a0153a764fa2a38647dfdd067, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _listObjectLava:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _listObjectWater:
-  - {fileID: 7579984068269516589}
-  - {fileID: 4806128266504418484}
-  - {fileID: 5263772137317222975}
-  - {fileID: 7746724726385581400}
-  - {fileID: 4463980721801492258}
-  - {fileID: 8216343935301089808}
-  - {fileID: 6554705839137192095}
-  - {fileID: 7072192700951841477}
-  - {fileID: 3662748776829097761}
-  - {fileID: 2154776164185782398}
-  - {fileID: 4850478663814291040}
-  - {fileID: 7028973993640142602}
-  - {fileID: 5651638448620645003}
-  - {fileID: 3661799042560514042}
-  - {fileID: 985007547563896836}
-  - {fileID: 1072013058793246214}
-  - {fileID: 5041167488142940860}
-  - {fileID: 444936273851771364}
-  - {fileID: 689413255638159141}
-  - {fileID: 4306983225724266159}
-  - {fileID: 4777773932610255006}
-  - {fileID: 4580234477117158250}
-  - {fileID: 5508168765738656513}
-  - {fileID: 7375336423709218628}
-  - {fileID: 8032342778981591810}
-  isCheckTouchLava: 0
-  _randomSpawn: 0.21
 --- !u!1 &2892772374995563411
 GameObject:
   m_ObjectHideFlags: 0
@@ -48180,7 +48118,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &51314152
 Rigidbody:
@@ -48196,7 +48134,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &3662748776829097761
 GameObject:
@@ -48259,7 +48197,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &693657888
 Rigidbody:
@@ -48275,7 +48213,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &3684359881814573015
 GameObject:
@@ -73444,7 +73382,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2065867442
 Rigidbody:
@@ -73460,7 +73398,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &4463980721801492258
 GameObject:
@@ -73523,7 +73461,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &239604944
 Rigidbody:
@@ -73539,7 +73477,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &4517032012436251169
 GameObject:
@@ -73698,7 +73636,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &572744624
 Rigidbody:
@@ -73714,7 +73652,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &4643687773237298087
 GameObject:
@@ -73919,7 +73857,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1865354803
 Rigidbody:
@@ -73935,7 +73873,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &4806128266504418484
 GameObject:
@@ -73998,7 +73936,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1829723972
 Rigidbody:
@@ -74014,7 +73952,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &4812560081951682800
 GameObject:
@@ -74244,7 +74182,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1162231609
 Rigidbody:
@@ -74260,7 +74198,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &4878466842076211549
 GameObject:
@@ -74491,7 +74429,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &529965574
 Rigidbody:
@@ -74507,7 +74445,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &5060390006235993693
 GameObject:
@@ -79676,7 +79614,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1563936633
 Rigidbody:
@@ -79692,7 +79630,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &5369509045184565429
 GameObject:
@@ -79803,7 +79741,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1411079864
 Rigidbody:
@@ -79819,7 +79757,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &5572418581627629737
 GameObject:
@@ -80099,7 +80037,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &674967955
 Rigidbody:
@@ -80115,7 +80053,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &5655889821970931703
 GameObject:
@@ -90811,7 +90749,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &677294878
 Rigidbody:
@@ -90827,7 +90765,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &6652867490337251598
 GameObject:
@@ -91141,7 +91079,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1174829076
 Rigidbody:
@@ -91157,7 +91095,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &7072192700951841477
 GameObject:
@@ -91220,7 +91158,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &441217898
 Rigidbody:
@@ -91236,7 +91174,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &7121531845817636585
 GameObject:
@@ -91562,7 +91500,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1500950614
 Rigidbody:
@@ -91578,7 +91516,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &7419286447423209033
 GameObject:
@@ -96649,7 +96587,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1216975497
 Rigidbody:
@@ -96665,7 +96603,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &7635475096548391879
 GameObject:
@@ -96776,7 +96714,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &22007622
 Rigidbody:
@@ -96792,7 +96730,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &7749137937383479982
 GameObject:
@@ -112021,7 +111959,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &926440868
 Rigidbody:
@@ -112037,7 +111975,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &8164643302324421018
 GameObject:
@@ -112219,7 +112157,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.031525984
+  m_Radius: 0.018413218
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1730500925
 Rigidbody:
@@ -112235,7 +112173,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &8520611139869008738
 GameObject:

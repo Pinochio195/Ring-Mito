@@ -33,7 +33,7 @@ public class BalloonManager : MonoBehaviour, ICollWithPlayer
     public GameObject _prefabsBalloon;
     private GameObject _spawnBalloon;
     private bool isCheckBalloon;
-    [HideInInspector]public bool isCheckClickDestroyBalloon;
+    [HideInInspector] public bool isCheckClickDestroyBalloon;
     public float moveSpeed = 5f;
 
     private Coroutine moveCoroutine;

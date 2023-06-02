@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerController2 : BasePlayerController
 {
@@ -16,6 +17,8 @@ public class PlayerController2 : BasePlayerController
 
     #endregion
 
+    public GameObject _waterPrefabs;
+    [HideInInspector]public GameObject _waterGameObject;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -69,12 +72,16 @@ public class PlayerController2 : BasePlayerController
 
     protected override void OnClickObject()
     {
-        if (_playerComponent._boyController.enabled)
+        
+    }
+    
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Lava"))
         {
-            _playerComponent._boyController.enabled = false;
+            _waterGameObject = Instantiate(_waterPrefabs, other.gameObject.transform);
+            _waterGameObject.transform.position = new Vector3(other.transform.position.x, other.transform.position.y+.5f, other.transform.position.z);
+            Destroy(gameObject);
         }
-        _playerComponent._girlController.enabled = true;
-        _playerComponent._boyController.gameObject.transform.Find("Arrow").gameObject.SetActive(false);
-        _playerComponent._girlController.gameObject.transform.Find("Arrow").gameObject.SetActive(true);
     }
 }
