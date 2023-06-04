@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FlowerMove : BaseObjectMovement
@@ -8,8 +9,9 @@ public class FlowerMove : BaseObjectMovement
     public int _breakPoint;
     public int _breakPointLeft;
 
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         _breakPointLeft = _breakPoint;
     }
 
@@ -20,20 +22,14 @@ public class FlowerMove : BaseObjectMovement
             // Kiểm tra nếu object đã đến được transform cuối cùng
             if (currentTargetIndex == _breakPointLeft && _breakPointLeft != 0)
             {
-                Debug.Log("ngưng tại đây");
                 return;
             }
         }
-
         base.Update();
-        if (isCheckMove)
+        if (this._breakPointLeft != this._breakPoint && transform.position.Equals(_listTargetOriginal[0].position))
         {
-            if (currentTargetIndex >= _listTargetTransforms.Count && currentTargetIndex == _listTargetTransforms.Count)
-            {
-                Debug.Log(123);
-                this._breakPointLeft = this._breakPoint;
-                return;
-            }
+            Debug.Log(123);
+            this._breakPointLeft = this._breakPoint;
         }
     }
 

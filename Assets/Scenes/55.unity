@@ -805,11 +805,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1165874, y: 0.54, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &565419944 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5782336884373159412, guid: a98be2e3db96887498277fdb75dceb39, type: 3}
-  m_PrefabInstance: {fileID: 5782336884396289087}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &712172726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -944,16 +939,8 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1764600166}
     m_Modifications:
-    - target: {fileID: 964972513, guid: 26a961c28843d274b9f8ff3609981406, type: 3}
-      propertyPath: _water
-      value: 
-      objectReference: {fileID: 2800725489945902426, guid: 4f33d1dcf1681694c9efc5e1aab72926, type: 3}
-    - target: {fileID: 964972513, guid: 26a961c28843d274b9f8ff3609981406, type: 3}
-      propertyPath: _waterPrefabs
-      value: 
-      objectReference: {fileID: 2800725489945902426, guid: 4f33d1dcf1681694c9efc5e1aab72926, type: 3}
-    - target: {fileID: 964972513, guid: 26a961c28843d274b9f8ff3609981406, type: 3}
-      propertyPath: _playerComponent._boyController
+    - target: {fileID: 1305155219, guid: 26a961c28843d274b9f8ff3609981406, type: 3}
+      propertyPath: _playerTouch._boyController
       value: 
       objectReference: {fileID: 1922083321}
     - target: {fileID: 8463780939243816777, guid: 26a961c28843d274b9f8ff3609981406, type: 3}
@@ -1118,7 +1105,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 964972513, guid: 26a961c28843d274b9f8ff3609981406, type: 3}
   m_PrefabInstance: {fileID: 900119002}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1305155216}
+  m_GameObject: {fileID: 0}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66583ecbf8565444894715d2a6093eb3, type: 3}
@@ -1250,27 +1237,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1305155216 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8463780939243816777, guid: 26a961c28843d274b9f8ff3609981406, type: 3}
-  m_PrefabInstance: {fileID: 900119002}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1305155219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1305155216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 531ea6b6e4d6f2748b46a6f7952f4f92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerTouch:
-    _girlController: {fileID: 1027838713}
-    _boyController: {fileID: 1922083321}
-  _gender: 1
 --- !u!1 &1422314480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,28 +1932,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5782336884373159410, guid: a98be2e3db96887498277fdb75dceb39, type: 3}
   m_PrefabInstance: {fileID: 5782336884396289087}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565419944}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6ea8691d1cc2e749ad6dcb5dd08c234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1922083324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565419944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 531ea6b6e4d6f2748b46a6f7952f4f92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerTouch:
-    _girlController: {fileID: 1027838713}
-    _boyController: {fileID: 1922083321}
-  _gender: 0
 --- !u!1 &1930092187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,6 +2581,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 144176106, guid: 67f102442efaea041bdaf59e10babc06, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670215522, guid: 67f102442efaea041bdaf59e10babc06, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4276768610288391423, guid: 67f102442efaea041bdaf59e10babc06, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -2761,16 +2719,8 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1764600166}
     m_Modifications:
-    - target: {fileID: 5782336884373159410, guid: a98be2e3db96887498277fdb75dceb39, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782336884373159410, guid: a98be2e3db96887498277fdb75dceb39, type: 3}
-      propertyPath: _playerComponent._boyController
-      value: 
-      objectReference: {fileID: 1922083321}
-    - target: {fileID: 5782336884373159410, guid: a98be2e3db96887498277fdb75dceb39, type: 3}
-      propertyPath: _playerComponent._girlController
+    - target: {fileID: 1922083324, guid: a98be2e3db96887498277fdb75dceb39, type: 3}
+      propertyPath: _playerTouch._girlController
       value: 
       objectReference: {fileID: 1027838713}
     - target: {fileID: 5782336884373159411, guid: a98be2e3db96887498277fdb75dceb39, type: 3}
@@ -2825,9 +2775,5 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5782336885473379466, guid: a98be2e3db96887498277fdb75dceb39, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e822ebfb57025204b99fc04d0c8cfe0c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a98be2e3db96887498277fdb75dceb39, type: 3}

@@ -1,0 +1,16 @@
+Lutos_spine.png
+size:1576,1576
+filter:Linear,Linear
+pma:true
+boat_behind
+bounds:2,1029,1572,545
+offsets:1,1,1574,547
+boat_front
+bounds:2,482,1461,545
+offsets:1,1,1463,547
+branch
+bounds:2,173,307,642
+rotate:90
+flower
+bounds:646,285,264,195
+offsets:1,1,266,197

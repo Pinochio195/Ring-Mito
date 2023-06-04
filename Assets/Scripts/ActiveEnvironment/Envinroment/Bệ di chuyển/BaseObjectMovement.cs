@@ -8,11 +8,20 @@ using UnityEngine.Serialization;
 public class BaseObjectMovement : MonoBehaviour
 {
     public AudioSource _audio;
-    public List<Transform> _listTargetTransforms; // Danh sách các transform mục tiêu
+    [SerializeField] protected List<Transform> _listTargetTransforms; // Danh sách các transform mục tiêu
+    protected List<Transform> _listTargetOriginal; // Danh sách các transform mục tiêu
+    private bool isCheckListQeque;
     public float speed = 3f; // Tốc độ di chuyển của object
-    [SerializeField]protected int currentTargetIndex = 0; // Chỉ số của transform hiện tại trong danh sách
+    [SerializeField] protected int currentTargetIndex = 0; // Chỉ số của transform hiện tại trong danh sách
     public bool isCheckMove;
     public bool isCheckClick;
+    protected bool isCheckReverse;
+
+    public virtual void Start()
+    {
+        _listTargetOriginal = new List<Transform>(_listTargetTransforms);
+    }
+
     public virtual void Update()
     {
         if (isCheckMove)
@@ -22,6 +31,7 @@ public class BaseObjectMovement : MonoBehaviour
             {
                 // Dừng di chuyển
                 _listTargetTransforms.Reverse();
+                isCheckReverse = true;
                 currentTargetIndex = 0;
                 isCheckMove = false;
                 isCheckClick = false;
@@ -47,9 +57,9 @@ public class BaseObjectMovement : MonoBehaviour
 
     public virtual void OnMouseDown()
     {
+        _audio.Play();
         if (!isCheckClick)
         {
-            _audio.Play();
             isCheckMove = true;
             isCheckClick = true;
         }

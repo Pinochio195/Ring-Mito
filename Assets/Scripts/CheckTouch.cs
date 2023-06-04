@@ -28,10 +28,8 @@ public class CheckTouch : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log(123);
         if (_gender == Gender.Girl)
         {
-        Debug.Log(1);
             if (_playerTouch._boyController.enabled)
             {
                 _playerTouch._boyController.enabled = false;

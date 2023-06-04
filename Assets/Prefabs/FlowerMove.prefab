@@ -177,9 +177,15 @@ MonoBehaviour:
   _listTargetTransforms:
   - {fileID: 0}
   - {fileID: 0}
-  speed: 3
+  - {fileID: 0}
+  - {fileID: 0}
+  _listTargetOriginal: []
+  speed: 2
+  currentTargetIndex: 0
   isCheckMove: 0
   isCheckClick: 0
+  _breakPoint: 2
+  _breakPointLeft: 0
 --- !u!1 &8381192654903978355
 GameObject:
   m_ObjectHideFlags: 0
